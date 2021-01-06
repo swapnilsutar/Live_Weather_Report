@@ -86,9 +86,13 @@
                 <?php
                 }
                 else{
-                    echo "<h1 class='notfound'>";
+                    ?>
+                    <h1>
+                        <?php
                     echo $msg;
-                    echo "</h1>";
+                    ?>
+                    </h1>
+                    <?php
                 }
                 ?>
 
