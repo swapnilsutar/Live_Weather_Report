@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Weather Reports</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./logs.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php 
@@ -37,9 +39,14 @@
             }
         }
     ?>
+
+    <h1 style="text-align:center;font-family: 'Courgette', cursive;margin-top:50px">
+        Live Weather Report
+    </h1>
+
         <form method="post">
             <div class="form-group">
-                <input type="text" class="form-control" name="city" placeholder="Enter City" value="<?php echo $city;?>">
+                <input type="text" class="form-control" name="city" placeholder="Search Location" value="<?php echo $city;?>">
                 <input type="submit" class="btn" name="submit" value="Search" >
             </div>
         </form>
@@ -66,7 +73,7 @@
                     <h3 style="font-size:30px;display:flex;"> 
                         <?php echo $result['wind']['speed'];?>
                     </h3>
-                    Km/h
+                    m/h
                 </div>
                 <div class="section3">
                     <?php 
@@ -87,18 +94,13 @@
                 }
                 else{
                     ?>
-                    <h1>
-                        <?php
-                    echo $msg;
-                    ?>
-                    </h1>
+                    <h1><?php echo $msg;?></h1>
                     <?php
                 }
                 ?>
 
 <footer>
-    Copyright &#169; 2021 : 
-    <a href="http://swapnilsutar.netlify.com/" target="_blank"> Swapnil Sutar </a>
+    Copyright &#169; 2021 :<a href="http://swapnilsutar.netlify.com/" target="_blank"> Swapnil Sutar </a>
 </footer>
 
 </body>

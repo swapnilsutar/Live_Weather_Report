@@ -6,12 +6,14 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .form-group{
     position: absolute;
     top: 20%;
     left: 50%;
+    display: flex;
     transform: translate(-50%,-50%);
     /* text-align: center; */
     justify-content: center;
@@ -131,9 +133,13 @@ footer{
     padding: 20px;
     margin-bottom: 50px;
     font-family: sans-serif;
+    width: 100%;
 }
 
 footer a{
     color: rgb(166, 255, 0);
     text-decoration: none;
+}
+footer a:hover{
+    color:black;
 }
